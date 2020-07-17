@@ -1,0 +1,6 @@
+172.18.0.1 - - [17/Jul/2020:15:32:49 +0000] "GET / HTTP/1.1" 403 491 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36"
+172.18.0.1 - - [17/Jul/2020:15:32:50 +0000] "GET /favicon.ico HTTP/1.1" 403 490 "http://localhost/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36"
+172.18.0.1 - - [17/Jul/2020:15:33:41 +0000] "-" 408 0 "-" "-"
+172.18.0.1 - - [17/Jul/2020:15:34:01 +0000] "GET / HTTP/1.1" 404 82796 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36"
+172.18.0.1 - - [17/Jul/2020:15:34:02 +0000] "GET /_wdt/96cc34 HTTP/1.1" 200 3335 "http://localhost/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36"
+172.18.0.1 - - [17/Jul/2020:15:34:02 +0000] "GET /favicon.ico HTTP/1.1" 404 250891 "http://localhost/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36"

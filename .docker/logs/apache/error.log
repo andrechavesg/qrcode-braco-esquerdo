@@ -1,0 +1,7 @@
+[Fri Jul 17 15:32:03.503861 2020] [ssl:info] [pid 16:tid 139873164333120] AH01883: Init: Initialized OpenSSL library
+AH00112: Warning: DocumentRoot [/home/wwwroot/public] does not exist
+[Fri Jul 17 15:32:03.527146 2020] [ssl:info] [pid 16:tid 139873164333120] AH01883: Init: Initialized OpenSSL library
+[Fri Jul 17 15:32:03.528442 2020] [mpm_event:notice] [pid 16:tid 139873164333120] AH00489: Apache/2.4.25 (Debian) OpenSSL/1.0.2u configured -- resuming normal operations
+[Fri Jul 17 15:32:03.528470 2020] [core:notice] [pid 16:tid 139873164333120] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND -e info'
+[Fri Jul 17 15:32:49.721641 2020] [authz_core:error] [pid 17:tid 139873043445504] [client 172.18.0.1:48364] AH01630: client denied by server configuration: /home/wwwroot/public
+[Fri Jul 17 15:32:50.140428 2020] [authz_core:error] [pid 17:tid 139873035052800] [client 172.18.0.1:48364] AH01630: client denied by server configuration: /home/wwwroot/public, referer: http://localhost/

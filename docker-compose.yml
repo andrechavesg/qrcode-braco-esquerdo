@@ -1,0 +1,55 @@
+version: '3.5'
+
+services:
+  apache:
+    build: ./.docker/apache
+    container_name: apache_veduca
+    ports:
+      - 80:80
+    volumes:
+      - "./:/home/wwwroot"
+      - "./.docker/config/vhosts:/etc/apache2/sites-enabled:cached"
+      - "./.docker/logs/apache:/var/log/apache2/:cached"
+    depends_on:
+      - php
+    networks:
+      - network
+
+  mysql:
+    image: mysql:5.7
+    command: "--default-authentication-plugin=mysql_native_password"
+    container_name: mysql_veduca
+    volumes:
+      - "dbdata:/var/lib/mysql"
+      - "./sql:/sql"
+    environment:
+      MYSQL_ROOT_PASSWORD: x5c2bgwj
+      MYSQL_DATABASE: veduca
+      MYSQL_USER: veduca
+      MYSQL_PASSWORD: x5c2bgwj
+    ports:
+      - 3306:3306
+    networks:
+      - network
+
+  php:
+    build: ./.docker/php
+    container_name: php_veduca
+    working_dir: /home/wwwroot
+    volumes:
+      - "./:/home/wwwroot"
+      - "./var/logs:/app/var/logs"
+      - "./var/cache.:/app/var/cache"
+    command: bash -c "COMPOSER_MEMORY_LIMIT=-1 composer install && php bin/console cache:clear && php-fpm"
+    depends_on:
+      - mysql
+    links:
+      - mysql
+    networks:
+      - network
+networks:
+  network:
+    external: true
+
+volumes:
+  dbdata:
